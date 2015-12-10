@@ -1,7 +1,7 @@
-//Johnny's Code modified by:Briyana Chataigne
+//Johnny's Code modified (with array)by:Briyana Chataigne
 import java.util.Scanner;
 
- class Dragon {
+ class  Dragon {
 	private String color;
 	private String ability;
 	private int size;
@@ -42,17 +42,19 @@ import java.util.Scanner;
    }
 	public String toString(){
 		return "\nColor:" + color +
-				"\nAbility:" + ability +
-				"\nSize:" + size +
-            "\nLevel:" + level;
+			"\nAbility:" + ability +
+			"\nSize:" + size +
+            		"\nLevel:" + level;
 	}
 }
 //====DragonDriver===
  public class JDragonDriver {
  	public static void main(String args[]) {
 		int i = 0;
-		String name = "";
-		int j = 0;
+		String color = "";
+		String element = "";
+		int size = 0;
+		int level = 0;
 		System.out.println("How many Dragons do you wish to conquer?");
 		Scanner scnr = new Scanner(System.in);
 		int numDragon = scnr.nextInt();
@@ -64,20 +66,20 @@ import java.util.Scanner;
 		dragonsNum[i] = new Dragon();
 		
 		System.out.println("What is the color of dragon number " +(i+1));
-		name = scnr.next();
-		dragonsNum[i].setColor(name);
+		color = scnr.next();
+		dragonsNum[i].setColor(color);
 		
 		System.out.println("What is the ability of dragon number "+ (i+1));
-		name = scnr.next();
-		dragonsNum[i].setAbility(name);
+		element = scnr.next();
+		dragonsNum[i].setAbility(element);
 		
 		System.out.println("What is the size of dragon number(numbers only) " +(i+1) );
-		j = scnr.nextInt();
-		dragonsNum[i].setSize(j);
+		size = scnr.nextInt();
+		dragonsNum[i].setSize(size);
 		
 		System.out.println("What is the level of dragon number(numbers only) " +(i+1) );
-		j = scnr.nextInt();
-		dragonsNum[i].setLevel(j);
+		level = scnr.nextInt();
+		dragonsNum[i].setLevel(level);
 
 		for(int a = 0;a < 1; ++a ){
 		System.out.println(dragonsNum[i]);
@@ -85,6 +87,12 @@ import java.util.Scanner;
 		
 		
 			}
+	
+		
+		}
+ }
+ //===End DragonDriver===
+
 	
 		
 		}
